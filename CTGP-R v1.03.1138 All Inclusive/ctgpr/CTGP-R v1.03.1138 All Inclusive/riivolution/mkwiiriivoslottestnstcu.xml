@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wiidisc version="1">
+  <id game="RMC" disc="0" version="0">
+    <region type="E"/>
+
+  </id>
+  <options>
+    
+
+    <section name="CTGP Settings">
+
+      <option id="CTs" name="CTGP Revolution Channel" default="1">
+        <choice name="Enabled!">
+          <patch id="CTsFTW" />
+        </choice>
+      </option>
+
+      <option name="Copy MKW save to SD card?" default="1">
+	<choice name="Enabled">
+  	   <patch id="redirectsave" /> 
+  	</choice>
+      </option>
+
+
+      </section>
+</options>
+
+
+
+  <patch id="CTsFTW">
+   
+   <file disc="main.dol" external="/apps/ctgpr/boot.dol" />
+  
+
+  </patch>
+
+
+  <patch id="redirectsave"> 
+     <savegame clone="true" external="/riivolution/save/{$__gameid}{$__region}"/> 
+  </patch>
+
+
+
+
+  
+
+
+</wiidisc>
